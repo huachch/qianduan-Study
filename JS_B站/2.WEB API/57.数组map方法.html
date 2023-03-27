@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const arr = ['red','blue','green']
+    //map方法也是遍历    可以返回一个数组
+    const newArr = arr.map(function(item,index){
+      // console.log(item);//数组元素
+      // console.log(i);//下标
+      return item + 'aloshi'
+    })
+    console.log(newArr);
+
+    console.log(arr.join('-'));//red-blue-green
+  </script>
+</body>
+</html>

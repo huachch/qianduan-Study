@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //以前的this指向：谁调用这个函数，this就指向谁
+    console.log(this);//window
+    // 普通函数
+    function fn(){
+      console.log(this);//window
+    }
+    window.fn()
+    //对象方法里的this
+    const obj = {
+      name:'dsujgfjk',
+      sayHi:function(){
+        console.log(this);//obj
+      }
+    }
+    obj.sayHi()
+
+
+    //箭头函数的this，是上一层的this指向
+    const fun = () => {
+      console.log(this);//window，指向script的this指向
+    }
+    fun()
+
+    //对象方法箭头函数this
+    const obk = {
+      uname:'dsjj',
+      sayHi:() => {
+        console.log(this);//window
+      }
+    }
+    obk.sayHi()
+
+    const obi = {
+      uname:'jikdsjk',
+      sayHi:function(){
+        console.log(this);//obi
+       let i = 10
+       const count = () => {
+        console.log(this);//obi
+       }
+       count()
+      }
+    }
+    obi.sayHi()
+  </script>
+</body>
+</html>

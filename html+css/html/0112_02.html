@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+        width: 1200px;
+        padding: 0;
+        margin: 0;
+        /* list-style: none; */
+        color: gray;
+    }
+    .pic{
+        width: 16rem;
+        height: 9.5rem;
+    }
+    .item-list{
+        list-style: none;
+        overflow: hidden;
+        background-color: white;
+        height: 20rem;
+    }
+    .user-info img{
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 50%;
+    }
+    .count{
+        font-size: 0.6rem;
+    }
+    .time{
+        color: #fff;
+        background-color: rgba(0, 0, 0, .4);
+        border-radius: 10%;
+        margin: .5rem .5rem 0 0;
+        font-size: 0.6rem;
+        top: 0;
+        right: 0;
+        padding: 0 .3rem;
+        position: absolute;
+    }
+    .shadow{
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0, 0, 0, .4);
+      top: 50px;
+      right: 108px;
+      border-radius: 50%;
+      position: absolute;
+      display: none;
+    }
+    .start{
+      height:0;   
+      width:0;   
+      overflow: hidden;   
+      font-size: 0;   
+      line-height: 0;   
+      border-color:transparent transparent transparent yellow;   
+      border-style:solid dashed dashed dashed;
+      border-width:20px;   
+      padding-left: 0px;
+      cursor: pointer;
+      top: 60px;
+      right: 105px;
+      position: absolute;
+      display: none;
+    }
+    .pic-box:hover > .shadow,.pic-box:hover >.start{
+      display: block;
+    }
+    .pic-box{
+        width: 16rem;
+        height: 9.5rem;
+        /* display: block; */
+        position: relative;
+    }
+    .item-list >li{
+        margin: 0 12px;
+        float: left;
+        width: 16rem;
+        height: 17.5rem;
+        border-radius: .2rem;
+        background-color: #fff;
+    }
+    /* .overflow{
+        font-size: 1rem;
+    } */
+    .date{
+        font-size: 0.5rem;
+    }
+    .name{
+        font-size: 0.5rem;
+    }
+    .info-box > a{
+        display: block;
+        font-size: 1rem;
+        /* font-weight: 600; */
+        /* line-height: 1.05rem; */
+        color: gray;
+        cursor: pointer;
+    }
+   
+    .item-list > .info-box > .user-info > a{
+        float: left;
+    }
+    .overflow{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .item-list .info-box {
+        width: 100%;
+        height: 8.5rem;
+        padding: 0.5rem 0.65rem;
+        box-sizing: border-box;
+    }
+    a {
+        color: #7e8c8d;
+        text-decoration: none;
+    }
+    .device > a:hover{
+        color: #1088f2;
+        text-decoration: underline;
+    }
+    .item-list > .info-box > .device > a{
+        color: #1088f2;
+    }
+    .name:hover{
+        color: #1088f2;
+        text-decoration: none;
+    }
+    .info-box > .device {
+        margin: 0.2rem 0;
+        font-size: 0.6rem;
+    }
+    .info-box > .count{
+        margin: 0.2rem 0;
+        font-size: 0.6rem;
+    }
+    .item-list .info-box > a {
+        color: #000;
+        cursor: pointer;
+    }
+    .item-list .info-box > .user-info {
+        font-size: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <ul class="item-list">
+        <li>
+            <div class="pic-box" href="#">
+                <img class="pic" src="./images/nature-1.jpg" >
+                <span class="time">03:07</span>
+                <div class="shadow"></div>
+                <div class="start"></div>
+            </div>
+            <div class="info-box">
+                <a class="overflow" href="#">吉林东山</a>
+                <p class="device">设备：<a href="#">DJI Mavic3</a></p>
+                <p class="count"><span>758</span>&nbsp;&nbsp;<span class="star">24</span></p>
+                <hr>
+                <div class="user-info">
+                    <a href="#">
+                        <img class="pic-people" src="images/ava.jpg" alt="">
+                        <span class="name">zhangpingcloud</span>
+                    </a>
+                    <span class="date">2022年12月11日</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="pic-box" href="#">
+                <img class="pic" src="./images/nature-2.jpg" >
+                <span class="time">03:07</span>
+                <div class="shadow"></div>
+                <div class="start"></div>
+            </div>
+            <div class="info-box">
+                <a class="overflow" href="#">风车云海</a>
+                <p class="device">设备：<a href="#">DJI Mavic3</a></p>
+                <p class="count"><span>758</span>&nbsp;&nbsp;<span class="star">24</span></p>
+                <hr>
+                <div class="user-info">
+                    <a href="#">
+                        <img class="pic-people" src="images/ava.jpg" alt="">
+                        <span class="name">zhangpingcloud</span>
+                    </a>
+                    <span class="date">2022年12月11日</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="pic-box" href="#">
+                <img class="pic" src="./images/nature-3.jpg" >
+                <span class="time">03:07</span>
+                <div class="shadow"></div>
+                <div class="start"></div>
+            </div>
+            <div class="info-box">
+                <a class="overflow" href="#">航拍视角下的 | 北戴河鸽子窝</a>
+                <p class="device">设备：<a href="#">DJI Mavic3</a></p>
+                <p class="count"><span>758</span>&nbsp;&nbsp;<span class="star">24</span></p>
+                <hr>
+                <div class="user-info">
+                    <a href="#">
+                        <img class="pic-people" src="images/ava.jpg" alt="">
+                        <span class="name">zhangpingcloud</span>
+                    </a>
+                    <span class="date">2022年12月11日</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="pic-box" href="#">
+                <img class="pic" src="./images/nature-4.jpg" >
+                <span class="time">03:07</span>
+                <div class="shadow"></div>
+                <div class="start"></div>
+            </div>
+            <div class="info-box">
+                <a class="overflow" href="#">Fishing anchovies in Hon Yen~</a>
+                <p class="device">设备：<a href="#">DJI Mavic3</a></p>
+                <p class="count"><span>758</span>&nbsp;&nbsp;<span class="star">24</span></p>
+                <hr>
+                <div class="user-info">
+                    <a href="#">
+                        <img class="pic-people" src="images/ava.jpg" alt="">
+                        <span class="name">zhangpingcloud</span>
+                    </a>
+                    <span class="date">2022年12月11日</span>
+                </div>
+            </div>
+        </li>
+       
+    </ul>
+</div>
+</body>
+</html>

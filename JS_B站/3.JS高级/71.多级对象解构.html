@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const pig = {
+    //   name:'peiqi',
+    //   family:{
+    //     mother:'zhuma',
+    //     father:'zhuba',
+    //     sister:'jog'
+    //   },
+    //   age:6
+    // }
+    // const {name, family:{mother,father,sister}} = pig
+    // console.log(name);
+    // console.log(mother);
+    // console.log(father);
+    // console.log(sister);
+
+    const person = [
+    {
+      name:'peiqi',
+      family:{
+        mother:'zhuma',
+        father:'zhuba',
+        sister:'jog'
+      },
+      age:6
+    }
+    ]
+    const [{name, family:{mother,father,sister}}] = person
+    console.log(name);
+    console.log(mother);
+    console.log(father);
+    console.log(sister);
+
+  </script>
+</body>
+</html>

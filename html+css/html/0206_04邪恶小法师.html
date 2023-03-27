@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邪恶小法师 </title>
+  <style>
+    .face {
+      margin: 100px auto;
+      width: 700px;
+      height: 700px;
+      border-top-right-radius: 35%;
+      border-top-left-radius: 35%;
+      border-bottom-right-radius: 70%;
+      border-bottom-left-radius: 70%;
+      background-color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .eyes {
+      margin: 50px auto;
+      width: 500px;
+      height: 200px;
+      display: flex;
+      justify-content: space-between
+    }
+
+    .left-eye {
+      margin: 50px 0px 0px 80px;
+      width: 100px;
+      height: 100px;
+      background-color: gainsboro;
+      border-top-right-radius: 100%;
+      border-bottom-left-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(-40deg);
+      transition: all 2s;
+    }
+
+    .right-eye {
+      margin: 50px 80px 0px 0px;
+      width: 100px;
+      height: 100px;
+      background-color: gainsboro;
+      border-top-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(40deg);
+      transition: all 2s;
+    }
+
+    .pupil {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: skyblue;
+      transition: all 2s;
+
+    }
+
+    .eyes:hover>.left-eye {
+      border: 1px solid gray;
+      margin: 50px 0px 0px 20px;
+      width: 150px;
+      height: 130px;
+      border-top-right-radius: 60%;
+      border-bottom-left-radius: 60%;
+      transform: rotate(-10deg);
+      background-color: pink;
+    }
+
+    .eyes:hover>.right-eye {
+      border: 1px solid gray;
+      margin: 50px 20px 0px 0px;
+      width: 150px;
+      height: 130px;
+      border-top-left-radius: 60%;
+      border-bottom-right-radius: 60%;
+      transform: rotate(10deg);
+      background-color: pink;
+    }
+
+    .eyes:hover .pupil {
+      width: 60px;
+      height: 60px;
+      background-color: red;
+    }
+
+    .nose {
+      width: 50px;
+      height: 100px;
+      background-color: wheat;
+      margin: 0 auto;
+      transition: all 2s;
+
+    }
+
+    .eyes:hover+.nose {
+      background-color: orange;
+    }
+
+    .mouse {
+      margin: 60px auto;
+      width: 200px;
+      height: 50px;
+      transition: all 2s;
+      background-color: gray;
+    }
+
+    .eyes:hover~.mouse {
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="face">
+    <div class="eyes">
+      <div class="left-eye">
+        <div class="pupil"></div>
+      </div>
+      <div class="right-eye">
+        <div class="pupil"></div>
+      </div>
+    </div>
+    <div class="nose"></div>
+    <div class="mouse"></div>
+  </div>
+
+
+
+</body>
+
+</html>

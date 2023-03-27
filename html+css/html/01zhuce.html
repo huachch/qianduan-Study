@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="http://42.192.86.44:3000/igeek/student/insert" method="post">
+  <p>
+    <label for="student_name">学生姓名：</label><input type="text" name="student_name" id="student_name" placeholder="请输入学生姓名">
+  </p>
+  <p>
+    <label for="student_code">学生学号：</label><input type="text" name="student_code" id="student_code" placeholder="请输入学生学号">
+  </p>
+  <p>学校名称：
+    <select id="school_name" name="school_name">
+      <option value="常熟理工学院" label="常熟理工学院"></option>
+      <option value="泰州学院" label="泰州学院"></option>
+      <option value="江科大张家港校区" label="江科大张家港校区"></option>
+      <option value="江科大长山校区" label="江科大长山校区"></option>
+    </select>
+  </p>
+  <p>
+    <button type="reset">重置</button>
+    <button type="submit">注册</button>
+  </p>
+</form>
+  <hr>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div class="box">111</div> -->
+  <div class="wrapper">
+    <strong>huachenchen</strong>
+    <h1>一等奖：<span id="one"></span></h1>
+    <h3>二等奖：<span id="two"></span></h3>
+    <h5>三等奖：<span id="three"></span></h5>
+  </div>
+  <script>
+    // const obj = {
+    //   name:'gdsjyhj'
+    // }
+
+    //获取元素
+    // const box = document.querySelector('.box')
+    //修改文字内容
+    // console.log(box.innerText);
+    // box.innerText = 'djshgjkk' //修改文字内容
+    // box.innerHTML = '<strong>fdsjhgfj</strong>'//识别标签
+
+
+    const person = ['1','2','3','4','5']
+    const random1 = Math.floor(Math.random()*person.length)
+
+    const one = document.querySelector('#one')
+    one.innerText = person[random1]
+    person.splice(random1,1)
+
+    const random2 = Math.floor(Math.random()*person.length)
+    const two = document.querySelector('#two')
+    two.innerText = person[random2]
+    person.splice(random2,1)
+
+    const random3 = Math.floor(Math.random()*person.length)
+    const three = document.querySelector('#three')
+    three.innerText = person[random3]
+    person.splice(random3,1)
+
+    console.log(person);
+  </script>
+</body>
+</html>

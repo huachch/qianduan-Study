@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const o = {uname:'dhgj', age:11}
+    //获得所有属性名
+    console.log(Object.keys(o));
+    //获得所有属性值
+    console.log(Object.values(o));
+
+    // const oo = {}
+    // Object.assign(oo,o)
+    // console.log(oo);
+
+    Object.assign(o,{gender:'nan'})//assign用于给对象加新属性
+    console.log(o);
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画</title>
+  <style>
+    @keyframes move-in {
+      0%{
+        width: 200px;
+      }
+      25%{
+        width: 1600px;
+      }
+      50%{
+        width: 400px;
+      }
+      75%{
+        width: 100px;
+      }
+      100%{
+        width: 800px;
+      }
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      animation: move-in 4s 1s linear infinite;
+    }
+    .box:hover{
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

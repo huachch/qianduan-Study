@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let that 
+    let those
+    function Star(uname){
+      that = this
+      // console.log(this);
+      this.uname = uname
+    }
+
+    //原型对象里面的this还是指向实例对象
+    Star.prototype.sing = function(){
+      those = this
+      console.log('changge');
+    }
+
+    const ldh = new Star('liudehua')
+    //构造函数里面的this就是实例对象
+    ldh.sing()
+    console.log(that === ldh);//true
+    console.log(those === ldh);//true
+  </script>
+</body>
+</html>

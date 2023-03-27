@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    input[type="checkbox"]+span {
+      position: relative;
+      display: flex;
+      width: 64px;
+      height: 32px;
+      background-color: gray;
+      border-radius: 1.2em;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: all .2s;
+    }
+
+    input[type="checkbox"]:checked+span {
+      background-color: green;
+    }
+
+    input[type="checkbox"]:checked+span>i1 {
+      background-color: green;
+    }
+
+    input[type="checkbox"]:checked+span>i2 {
+      background-color: #fff;
+    }
+
+    input[type="checkbox"]+span>i1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2px;
+      width: 28px;
+      height: 28px;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    input[type="checkbox"]+span>i2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2px;
+      width: 28px;
+      height: 28px;
+      background-color: gray;
+      border-radius: 50%;
+    }
+
+    text {
+      /* vertical-align:baseline; */
+      /* padding-bottom: 5px; */
+    }
+  </style>
+</head>
+
+<body>
+  <label for="switch">
+    <input type="checkbox" id="switch"><span>
+      <i1><text>on</text></i1>
+      <i2><text>off</text></i2>
+    </span>开关
+  </label>
+</body>
+
+</html>

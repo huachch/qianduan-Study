@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label[for] {
+      display: flex;
+      padding: 8px;
+      position: relative;
+    }
+
+    input[type="checkbox"] {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: -200px;
+      left: -200px;
+
+    }
+
+    input[type="checkbox"]+span {
+      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border: 3px solid grey;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    input[type="checkbox"]+span>i {
+      width: 0;
+      height: 0;
+      border-radius: 0;
+      opacity: 0;
+      background-color: transparent;
+      transition: all .2s linear;
+
+    }
+
+    input[type="checkbox"]:checked+span {
+      border: 3px solid rgb(241, 0, 0);
+    }
+
+    input[type="checkbox"]:checked+span>i {
+      display: block;
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+      border-radius: 50%;
+      background-color: rgb(241, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <label for="hmj">
+    <input type="checkbox" id="hmj"><span><i></i></span>黄焖鸡
+  </label>
+  <label for="lzlm">
+    <input type="checkbox" id="lzlm"><span><i></i></span>兰州拉面
+  </label>
+  <label for="yzzc">
+    <input type="checkbox" id="yzzc"><span><i></i></span>扬州早茶
+  </label>
+  <label for="ldb">
+    <input type="checkbox" id="ldb"><span><i></i></span>老东北
+  </label>
+  <!-- <input type="checkbox">黄焖鸡
+  <input type="checkbox">兰州拉面
+  <input type="checkbox">兰州早茶
+  <input type="checkbox">老东北 -->
+</body>
+
+</html>

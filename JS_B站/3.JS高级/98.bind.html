@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>bagayalu</button>
+  <script>
+    const obj = {
+      uname:'pink'
+    }
+    function fn(x,y){
+      console.log(this);//window
+      console.log(x+y);
+    }
+    // 调用函数
+    // 改变this指向
+    // 返回值是个函数，但这个函数里的this是改过的obj
+    const fun = fn.bind(obj,1,2)
+    console.log(fun);
+    fun()
+
+    // 需求：有一个按钮，点击就禁用，2秒后开启
+    const btn = document.querySelector('button')
+    btn.addEventListener('click',function(){
+      this.disabled = true
+      setTimeout(function(){
+        // btn.disabled = false
+
+        // 在这个普通函数里，我们要this由原来的window改为btn
+        this.disabled = false
+      }.bind(btn),2000)
+    })
+  </script>
+</body>
+</html>

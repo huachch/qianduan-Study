@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 600px;
+      margin: 0 auto;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .inp {
+      display: block;
+      width: 400px;
+      height: 40px;
+      /* margin: 20px auto; */
+    }
+
+    .codeinput {
+      max-height: 67px;
+    }
+
+    .cho {
+      width: 400px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      width: 400px;
+      height: 40px;
+      font-size: 20px;
+      margin-top: 20px;
+      background-color: rgb(73, 185, 155);
+    }
+
+    .err {
+      font-size: 12px;
+      width: 400px;
+      height: auto;
+      color: red;
+      opacity: 0;
+    }
+
+    .errcode {
+      font-size: 12px;
+      width: 400px;
+      height: auto;
+      color: red;
+      opacity: 0;
+    }
+
+    .treaty {
+      color: rgb(73, 185, 155);
+    }
+
+    .code {
+      position: relative;
+      top: -34px;
+      right: -190px;
+      color: rgb(73, 185, 155);
+      width: 200px;
+      max-height: 15px;
+      font-size: 15px;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>
+      <input class="inp" name="username" type="text" placeholder="设置用户名称">
+      <span class="err">昵称长度为6到10个字符</span>
+    </div>
+
+    <div>
+      <input class="inp" name="phone" type="text" placeholder="输入手机号码">
+      <span class="err">请输入正确的手机号</span>
+    </div>
+
+    <div class="codeinput">
+      <input class="inp" name="incode" type="text" placeholder="短信验证码">
+      <div class="code">发送验证码</div>
+      <span class="errcode">请输入正确的验证码</span>
+    </div>
+
+    <div>
+      <input class="inp" type="text" placeholder="设置6至20位字母数字和字符组合">
+      <span class="err">设置6至20位字母数字和字符组合</span>
+    </div>
+
+    <div>
+      <input class="inp" type="text" placeholder="请再次输入密码">
+      <span class="err">两次输入的密码不一致</span>
+    </div>
+
+    <div class="cho">
+      <input type="checkbox">
+      <span>阅读并同意<span class="treaty">《用户服务协议》</span></span>
+    </div>
+
+    <button>下一步</button>
+
+    <script>
+      // 1. 发送短信验证码
+      const code = document.querySelector('.code')
+      let flag = true // 通过变量控制  节流阀
+      // 1.1 点击事件
+      code.addEventListener('click', function () {
+        if (flag === true) {
+          flag = false
+          let i = 5
+          // 点击完毕后立马触发
+          code.innerHTML = `05秒后重新获取`
+          // 开启定时器
+          const timer = setInterval(function () {
+            i--
+            code.innerHTML = `0${i}秒后重新获取`
+            if (i === 0) {
+              // 清除定时器
+              clearInterval(timer)
+              // 重新获取
+              code.innerHTML = `发送验证码`
+              flag = true
+            }
+          }, 1000)
+        }
+      })
+
+      // 2.验证用户名
+      // 2.1 获取用户表单
+      const username = document.querySelector('[name=username]')
+      // 2.2 使用change事件  值发生变化的时候
+      username.addEventListener('change', verifyName)
+      // 2.3 封装verifyName函数
+      function verifyName() {
+        const span = username.nextElementSibling
+        // 2.4 定规则 用户名
+        const reg = /^[a-zA-Z0-9-_]{6,10}$/
+        if (!reg.test(username.value)) {
+          span.style.opacity = 1
+          return false
+        }
+        // 2.5 合法的就不显示span
+        span.style.opacity = 0
+        return true
+      }
+
+      // 3.验证手机号
+      // 3.1 获取用户手机号
+      const phone = document.querySelector('[name=phone]')
+      // 3.2 使用change事件  值发生变化的时候
+      phone.addEventListener('change', verifyPhone)
+      // 3.3 封装verifyPhone函数
+      function verifyPhone() {
+        const span = phone.nextElementSibling
+        // 3.4 定规则 用户名
+        const reg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+        if (!reg.test(phone.value)) {
+          span.style.opacity = 1
+          return false
+        }
+        // 3.5 合法的就不显示span
+        span.style.opacity = 0
+        return true
+      }
+
+      // 4.验证验证码
+      // 4.1 获取用户验证码
+      const incode = document.querySelector('[name=incode]')
+      // 4.2 使用change事件  值发生变化的时候
+      incode.addEventListener('change', verifyCode)
+      // 4.3 封装verifyCode函数
+      function verifyCode() {
+        const span = document.querySelector('.errcode')
+        // 4.4 定规则 用户名
+        const reg = /^\d{6}$/
+        if (!reg.test(incode.value)) {
+          span.style.opacity = 1
+          return false
+        }
+        // 4.5 合法的就不显示span
+        span.style.opacity = 0
+        return true
+      }
+    </script>
+  </div>
+</body>
+
+</html>

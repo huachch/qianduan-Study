@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0105</title>
+</head>
+<body>
+
+  <form action="http://42.192.86.44:3000/igeek/student/query?student_name=%E5%BC%A0%E4%B8%89&student_code=3130602057&school_name=%E6%B1%9F%E8%8B%8F%E5%A4%A7%E5%AD%A6" method="get" target="_blank">
+    <p>
+      <label for="student_name">学生姓名：</label><input type="text" id="student_name" name="student_name" placeholder="请输入学生姓名">
+    </p>
+    <p>
+      <label for="student_code">学生学号：</label><input type="text" id="student_code" name="student_code" placeholder="请输入学生学号">
+    </p>
+    <p>
+      <label for="school_name">学生学校：</label>
+      <select  id="school_name" name="school_name">
+        <option value="常熟理工学院" label="常熟理工学院"></option>
+        <option value="泰州学院" label="泰州学院"></option>
+        <option value="江科大张家港校区" label="江科大张家港校区"></option>
+        <option value="江科大长山校区" label="江科大长山校区"></option>
+      </select>
+    </p>
+    <p>
+      <button type="reset">重置</button>
+      <button type="submit">查询</button>
+    </p>
+  </form>
+</body>
+</html>
+
+
+
+
+<!-- <form action="chapter.html" method="post" target="_blank">
+  <p><label for="username">用户名：</label><input type="text" name="username" id="username" value="admin" placeholder="请输入用户名" required></p>
+  <p><label for="password">密码：</label><input type="password" name="password" id="password" value="123456" placeholder="请输入密码" required></p>
+  <input type="checkbox" name="" id="">记住密码
+  <p>
+    <button type="submit">登录</button>
+    <button type="reset">重置</button>
+  </p>
+</form>
+<hr> -->

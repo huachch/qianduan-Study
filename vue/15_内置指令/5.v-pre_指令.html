@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../js/vue.js"></script>
+  <title>v-pre_指令</title>
+  <style>
+    [v-cloak]{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 
+      v-pre指令:
+          1.跳过其所在节点的编译过程。
+          2.可利用它跳过:没有使用指令语法、没有使用插值语法的节点，会加快编译。
+   -->
+
+  <div id="root">
+    <h1 v-pre>bala</h1>
+    <h1>当前的n: {{n}}</h1>
+    <button @click="n++">点我n+1</button>
+  </div>
+
+</body>
+
+  <script>
+    const vm = new Vue({
+      el:'#root',
+      data:{
+        n:1
+      },
+    })
+  </script>
+</html>
+ 

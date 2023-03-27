@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav {
+      background-color: black;
+      height: 3.75rem;
+      justify-content: space-between;
+      width: 100vm;
+      min-width: 80rem;
+      display: flex;
+      /* align-items: center; */
+    }
+
+    .nav1 {
+      font-size: 1.5rem;
+    }
+
+    .nav1,
+    .nav2,
+    .nav3 {
+      margin: auto 3rem;
+      color: white;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .nav2,
+    .nav3 {
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      justify-content: space-between;
+      /* padding: 0px 20px; */
+    }
+
+    .home {
+      margin: 0rem 1rem;
+    }
+
+    .home:hover {
+      color: white;
+    }
+
+    img {
+      vertical-align: sub;
+    }
+
+    .search {
+      margin: 0rem 1rem;
+    }
+
+    .search:hover {
+      color: white;
+    }
+
+    .container {
+      width: 75rem;
+      height: auto;
+      margin: auto;
+    }
+
+    .con {
+      margin-top: 1rem;
+      height: 12.5rem;
+      width: 75rem;
+      background-color: aqua;
+      justify-content: space-between;
+      overflow: auto;
+      display: flex;
+    }
+
+    .box {
+      width: 75rem;
+      height: 100vm;
+      float: left;
+      flex-shrink: 0;
+    }
+
+    .box1 {
+      background-color: red;
+    }
+
+    .box2 {
+      background-color: orange;
+    }
+
+    .box3 {
+      background-color: yellow;
+    }
+
+    .box4 {
+      background-color: green;
+    }
+
+    .box5 {
+      background-color: blue;
+    }
+
+    .sift {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .pic {
+      width: 11.25rem;
+      height: 7.5rem;
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav1">天空之城™</div>
+    <div class="nav2">
+      <div class="home">首页</div>
+      <div class="home">探索</div>
+      <div class="home">标签</div>
+      <div class="home">摄影师</div>
+      <div class="home">签约摄影师招募</div>
+      <div class="home">热门活动</div>
+      <div class="home">天空之城8周年影像大赛&nbsp;<img src="../images/hot-tag.svg"></div>
+    </div>
+    <div class="nav3">
+      <div class="search">&</div>
+      <div class="search">注册</div>
+      <div class="search">登录</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="con">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+    </div>
+    <div class="sift">
+      <div class="sifts">
+        <div class="pic"></div><br>
+        <span>澳大利亚</span>
+      </div>
+      <div class="sifts">
+        <div class="pic"></div><br>
+        <span>美国</span>
+      </div>
+      <div class="sifts">
+        <div class="pic"></div><br>
+        <span>冰岛</span>
+      </div>
+      <div class="sifts">
+        <div class="pic"></div><br>
+        <span>西藏</span>
+      </div>
+      <div class="sifts">
+        <div class="pic"></div><br>
+        <span>上海</span>
+      </div>
+      <div class="sifts">
+        <div class="pic"></div><br>
+        <span>新疆</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

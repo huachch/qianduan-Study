@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    .nav{
+      color: red;
+    }
+
+    .box{
+      width: 300px;
+      height: 400px;
+      background-color: skyblue;
+      border: 5px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">21326</div>
+  <script>
+    //获取元素
+    const div = document.querySelector('div')
+    //添加类名    class是关键字，我们用className
+    div.className = 'box nav'
+  </script>
+</body>
+</html>

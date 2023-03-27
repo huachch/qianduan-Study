@@ -1,0 +1,64 @@
+/* 第1题 */
+place{}
+/* 第2题 */
+bento{}
+/* 第3题 * /
+#fancy{}
+/* 第4题 */
+plate apple{}
+/* 第5题 */
+#fancy pickle{}
+/* 第6题 */
+.small{}
+/* 第7题 */
+orange.small{}
+/* 第8题 */
+bento orange.small{}
+/* 第9题 */
+plate,bento{}
+/* 第10题 */
+*{}
+/* 第11题 */
+plate *{}
+/* 第12题 */
+plate+apple{}
+/* 第13题 */
+bento~pickle{}
+/* 第14题 */
+plate>apple
+/* 第15题 */
+plate orange:first-child
+/* 第16题 */
+plate :only-child{}
+/* 第17题 */
+apple:last-child,pickle:last-child{}
+/* 第18题 */
+plate:nth-child(3){}
+/* 第19题 */
+bento:nth-last-child(3){}
+/* 第20题 */
+apple:first-of-type{}
+/* 第21题 */
+plate:nth-of-type(2n){}
+/* 第22题 */
+plate:nth-of-type(2n+3){}
+/* 第23题 */
+plate apple:only-of-type{}
+/* 第24题 */
+orange:last-of-type,apple:last-of-type{}
+/* 第25题 */
+bento:empty{}
+/* 第26题 */
+apple:not(.small){}
+/* 第27题 */
+[for]{}
+/* 第28题 */
+plate[for]{}
+/* 第29题 */
+bento[for="Vitaly"]{}
+/* 第30题 */
+[for^="Sa"]{}
+/* 第31题 */
+[for$="ato"]{}
+/* 第32题 */
+[for*="obb"]{}

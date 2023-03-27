@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>计算器</title>
+  <style>
+    .container{
+      display: grid;
+      grid-template-columns: repeat(4,60px);
+      grid-template-rows: repeat(6,60px);
+      grid-template-areas: 
+      "a a a a"
+      "b c d e"
+      "f g h i"
+      "j k l m"
+      "n o p q"
+      "r r s t";
+      gap:20px;
+      background-color: #DDF2F3;
+      width: 360px;
+      height: 520px;
+      margin: auto auto;
+      border-radius: 20px;
+      box-shadow: 10px 5px 5px gray;
+      align-content: center;
+      justify-content: center;
+    }
+    .button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2em;
+      background: linear-gradient(to left top,white,#B8CCD7);
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .button:hover{
+      background: rgba(123, 123, 123, 0.2);
+    }
+    .button:active{
+      box-shadow: 2px 2px 2px gray;
+    }
+    .a{
+      border: black solid 1.5px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 10px;
+      font-size: 32px;
+      align-items: center;
+      background-color: #E0E0E0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="a" style="grid-area: a">0</div>
+    <div class="button b" style="grid-area: b"><strong>AC</strong></div>
+    <div class="button c" style="grid-area: c">土</div>
+    <div class="button d" style="grid-area: d">%</div>
+    <div class="button e" style="grid-area: e">÷</div>
+    <div class="button f" style="grid-area: f">7</div>
+    <div class="button g" style="grid-area: g">8</div>
+    <div class="button h" style="grid-area: h">9</div>
+    <div class="button i" style="grid-area: i">x</div>
+    <div class="button j" style="grid-area: j">4</div>
+    <div class="button k" style="grid-area: k">5</div>
+    <div class="button l" style="grid-area: l">6</div>
+    <div class="button m" style="grid-area: m">-</div>
+    <div class="button n" style="grid-area: n">1</div>
+    <div class="button o" style="grid-area: o">2</div>
+    <div class="button p" style="grid-area: p">3</div>
+    <div class="button q" style="grid-area: q">+</div>
+    <div class="button r" style="grid-area: r">0</div>
+    <div class="button s" style="grid-area: s">.</div>
+    <div class="button t" style="grid-area: t">=</div>
+  </div> 
+</body>
+
+</html>
